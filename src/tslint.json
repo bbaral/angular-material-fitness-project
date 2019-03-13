@@ -12,6 +12,13 @@
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+      "no-trailing-whitespace": false,
+      "whitespace": false,
+      "typedef-whitespace": false,
+      "no-inferrable-types": false,
+      "max-line-length": false,
+      "no-empty-interface": false
+
     }
 }

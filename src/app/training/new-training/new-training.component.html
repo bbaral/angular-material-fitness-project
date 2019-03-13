@@ -1,0 +1,53 @@
+<!--<section class="new-training" fxLayout fxLayoutAlign="center">-->
+  <!--<form (ngSubmit)="onStartTraining(f)" #f="ngForm">-->
+    <!--<mat-card fxFlex.xs="100%" fxFlex="400px">-->
+      <!--<mat-card-title fxLayoutAlign="center">Time to start a workout!</mat-card-title>-->
+      <!--<mat-card-content fxLayoutAlign="center">-->
+        <!--<mat-form-field>-->
+          <!--<table mat-table class="mat-elevation-z8">-->
+            <!--<ng-container matColumnDef="name">-->
+          <!--<mat-select placeholder="Choose Exercise" ngModel name="exercise" required>-->
+            <!--<mat-option *ngFor="let exercise of exercises" [value]="exercise.id">-->
+              <!--{{ exercise.name }}-->
+            <!--</mat-option>-->
+          <!--</mat-select>-->
+            <!--</ng-container>-->
+          <!--<ng-container matColumnDef="level">-->
+          <!--<mat-select placeholder="Choose Training Level" ngModel name="level" required>-->
+            <!--<mat-option *ngFor=" let exercise of exercises" [value]="exercise.level">-->
+              <!--{{exercise.level}}-->
+            <!--</mat-option>-->
+          <!--</mat-select>-->
+          <!--</ng-container>-->
+            <!--<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+            <!--<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
+          <!--</table>-->
+        <!--</mat-form-field>-->
+      <!--</mat-card-content>-->
+      <!--<mat-card-actions fxLayoutAlign="center">-->
+        <!--<button type="submit" mat-button [disabled]="f.invalid">Start</button>-->
+      <!--</mat-card-actions>-->
+    <!--</mat-card>-->
+  <!--</form>-->
+<!--</section>-->
+
+
+<section class="new-training" fxLayout fxLayoutAlign="center">
+  <form (ngSubmit)="onStartTraining(f)" #f="ngForm">
+    <mat-card fxFlex.xs="100%" fxFlex="400px">
+      <mat-card-title fxLayoutAlign="center">Time to start a workout!</mat-card-title>
+      <mat-card-content fxLayoutAlign="center">
+        <mat-form-field>
+          <mat-select placeholder="Choose Exercise" ngModel name="exercise" required>
+            <mat-option *ngFor="let exercise of exercises" [value]="exercise.id">
+              {{ exercise.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="center">
+        <button type="submit" mat-button [disabled]="f.invalid">Start</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</section>
